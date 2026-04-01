@@ -59,7 +59,7 @@ runs:
         sudo rm -rf /usr/local/share/powershell
 
         df -h
-    - uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5.0.2
+    - uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
       if: inputs.enable_go == 'true'
       with:
         path: |
@@ -68,7 +68,7 @@ runs:
         key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
         restore-keys: |
           ${{ runner.os }}-go-
-    - uses: actions/cache@8b402f58fbc84540c8b491a91e594a4576fec3d7 # v5.0.2
+    - uses: actions/cache@668228422ae6a00e4ad889ee87cd7109ec5666a7 # v5.0.4
       if: inputs.enable_npm == 'true'
       with:
         path: |
